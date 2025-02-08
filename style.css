@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:  'Work Sans', sans-serif;
+    font-size: 1.125rem;
+}
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    height: 1px;
+    border-width: 0;
+    background-color: var(--color-black);
+}
+
+section {
+    padding: 1em 0;
+ }
+
+ table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+td {
+    border: black solid 2px;
+    padding: 1em 0.5em;
+}
+
+/* ========SITEWIDE STYLES================================================*/
+
+
+:root {
+    --color-lime: #E4FFC2;
+    --color-lilac:#CBC2FF;
+    --color-pink: #FFC2D1;
+    --color-black: #000; 
+    --color-peach: #FFE0C2;
+    --color-blue: #C2EDFF;
+    --color-dark-gray: #2f2f2f;
+  
+    --color-pale-gray: #EEEEEE;
+
+    --text-color-black: #000;
+    --text-color-dark: #1B1A1A;
+    --text-color-med:#494949;
+    --text-color-white: #FFF;
+  }
+    /*
+  --med-gray: #2f2f2f 50%;
+  */
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 60%;
+    height: auto;
+ }
+
+ .nav {
+     display: flex;
+ }
+
+ .nav__list {
+     display: none;
+ }
+
+ .nav__list--push-right {
+    margin-left: auto;
+}
+
+ .nav__link{
+    color: var(--color-black);
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: var(--color-black);
+    color: #FFF;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: 0.75;
+}
+
+/* ======================TYPOGRAPHY==============================================*/
+
+.title-grotesque {
+    font-family: 'Darker Grotesque', sans-serif;
+    color: var(--color-black);
+}
+
+.hero__text {
+    color: var(--text-color-black);
+}
+
+.hero__title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+.section__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-top: 0;
+}
+
+.c__text {
+    font-size: 0.875rem;
+    line-height: 1.6em;
+}
+
+
+
+/* ================================SPECIFIC STYLES===================================*/
+
+
+/*------------------HERO----------------------------------*/
+.hero-background {
+    background-image: url(/resources/hero-bckgrnd-overlay.svg), url(/resources/hero-background.svg);
+    background-color:var(--color-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25%, 60%;
+    padding-top: 1em;
+}
+
+.hero {
+    padding-bottom: 0.5em;
+}
+
+.hero,
+.clients__nav {
+    max-width: 1000px;
+}
+
+.hero__text {
+    padding-top: 2em;
+}
+
+.hero__cta {
+    max-width: 450px;
+}
+
+.hero__cta--btn {
+    display: block;
+    width: 70%;
+    margin: 2em 0;
+}
+
+.clients__nav {
+    padding-top: 5em;
+}
+
+.clients__nav--title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.clients__list {
+    justify-content: space-between;
+}
+
+.clients__item {
+    margin: 1em 0;
+}
+
+.clients__link {
+    color: var(--text-color-white)
+}
+
+.sub-section {
+    padding-bottom: 2em;
+}
+
+.section-1 p,
+.section-1 td {
+    color: var(--text-color-med);
+
+}
+
+.table__title--1 {
+    background: var(--color-blue);
+}
+
+.table__title--2 {
+    background: var(--color-lime);
+}
+
+.table__title--3 {
+    background: var(--color-pink);
+}
+
+@media (min-width: 900px) {
+    .row {
+        display: flex;
+        gap: 3em;
+    }
+
+    .hero__text {
+        width: 50%;
+    }
+
+    .hero__cta {
+        width: 40%;
+        align-self: center;
+    }
+
+    
+
+}
+
+/*
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: rem;
+        line-height: em;
+        margin-top: 0;
+    }
+    
+}
+
+@media (min-width: 900px) {
+    h1 {
+        font-size: rem;
+        line-height: em;
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1em;
+    }    
+
+    .c__text {
+        font-size: 1.125rem;
+        line-height: 1.5em;
+    }
+
+    .clients__nav h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .section__intro {
+        font-size: 1rem;
+    }
+
+    .section__title-short {
+        font-size: 2rem;
+        width: 40%;
+        line-height: 1.2em;
+    }
+
+    .section__title-long {
+        font-size: 2rem;
+        width: 50%;
+        line-height: 1.2em;
+    }
+    
+    header {
+        padding: 2em 0;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .space-between {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav__list,
+    .clients__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__list {
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .hero,
+    .clients__nav {
+        width: 90%;
+        justify-content: space-between;
+    }
+    
+    .hero{
+        padding: 2em 0;
+    }
+    
+    .hero__text {
+        width: 50%;
+    }
+    .hero__cta {
+        width: 40%;
+        align-self: center;
+    }
+
+    .hero__cta--btn {
+        margin: 0;
+    }
+
+    .intro-background {
+        background-position: 0%, 0%;
+    }
+
+    .nav__mobile {
+        display: none;
+    }
+
+    .nav__link--btn {
+        color: #FFF;
+        background: var(--color-black);
+        border-radius: 100px;
+        padding: 0.5em 1em;
+    }
+
+    .hero,
+    .clients__nav {
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .hero__text {
+        width: 45%;
+    }
+
+    .tables {
+        display: flex;
+        flex-direction: row;
+    }
+
+    table {
+        max-width: 32%;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    body {
+        line-height: 1.3rem;
+    }
+
+    h1 {
+        font-size: rem;
+        line-height: em;
+        margin-top: 0;
+    }
+
+    .nav__link{
+        font-size: 1.125rem;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+        line-height: 1em;
+    }
+
+    .c__text{
+        font-size: 1rem;
+    }
+
+    .section__subtitle {
+        font-size: 1rem; 
+     }
+ 
+     .section__title-short {
+         font-size: 3rem;
+     }
+ 
+     .section__title-long {
+         font-size: 3rem;
+     }
+
+    .table__title {
+        font-size: 1.5rem;
+    }
+
+    .table__content {
+        line-height: 1.3em;
+    }
+
+    .clients__nav {
+        justify-content: space-around;
+    }
+
+    .clients__list {
+       justify-content: flex-start;
+    }
+
+    .clients__item {
+        margin-right: 2em;
+    }
+
+    .col-1 {
+        width: 45%;
+    }    
+}
+
+*/
